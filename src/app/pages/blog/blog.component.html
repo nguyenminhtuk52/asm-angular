@@ -1,0 +1,17 @@
+<div>
+  <section class="recent-posts py-10 md:px-60">
+    <div class="max-w-8xl mx-auto px-5">
+      <h2 class="font-bold text-left text-5xl py-5">Blog</h2>
+    </div>
+    <div *ngFor="let work of listWorks"  class="bg-white px-5 py-8 border-b md:max-w-5xl">
+      <h3 class="mb-5"><a href="" class="text-2xl font-bold">{{work.name}}</a></h3>
+      <div class="flex space-x-4 py-5">
+        <span>{{work.date}}</span>
+        <span>|</span>
+        <span>{{work.framworks}}</span>
+      </div>
+      <p>{{work.description}}</p>
+    </div>
+  </section>
+</div>
+

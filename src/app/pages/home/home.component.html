@@ -1,0 +1,73 @@
+<section class="infor py-5 ">
+  <div class="max-w-8xl mx-auto px-5">
+    <div class="grid md:grid-cols-3">
+      <div class="md:col-span-2 max-w-3xl order-2 md:order-1">
+        <h2 class="text-3xl md:text-5xl font-bold py-5 md:leading[60px] leading-auto md:text-left text-center">Hi, I am
+          John,
+          Creative Technologist</h2>
+        <p class="md:text-base py-5 leading[60px] md:text-left text-center">Amet minim mollit non deserunt ullamco est
+          sit aliqua dolor do amet
+          sint. Velit officia
+          consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+        <div class="text-center md:text-left"><a href=""
+            class="inline-block mx-auto bg-blue-300 px-5 py-3 rounded-sm md:mx-auto">Download Resume</a></div>
+      </div>
+      <div class="md:col-span-1 mx-auto order-1 md:order-2">
+        <img src="https://picsum.photos/243/243" alt="" class="rounded-full md:ml-auto md:mr-0" />
+      </div>
+    </div>
+  </div>
+</section>
+<section class="recent-posts bg-[#EDF7FA] py-10 px-5">
+  <div class="max-w-8xl mx-auto px-5">
+    <div class="flex justify-between py-5 md:px-5 lg:px-0">
+      <h2 class="text-xl">Recent posts </h2>
+      <a href="" class="text-[#00A8CC]">View all</a>
+    </div>
+  </div>
+  <div class="grid md:grid-cols-2 gap-20">
+    <div class="bg-white px-5 py-8 ">
+      <h3 class="mb-5"><a href="" class="text-2xl font-bold">Making a design system from scratch</a></h3>
+      <div class="flex space-x-4 py-5">
+        <span>12 Feb 2020</span>
+        <span>|</span>
+        <span>Design, Pattern</span>
+      </div>
+      <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim
+        velit
+        mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+    </div>
+    <div class="bg-white px-5 py-8 ">
+      <h3 class="mb-5"><a href="" class="text-2xl font-bold">Making a design system from scratch</a></h3>
+      <div class="flex space-x-4 py-5">
+        <span>12 Feb 2020</span>
+        <span>|</span>
+        <span>Design, Pattern</span>
+      </div>
+      <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim
+        velit
+        mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+    </div>
+  </div>
+
+</section>
+<section class="feature-projects">
+  <div class="max-w-8xl mx-auto px-5">
+    <div class="flex justify-between py-5 px-5">
+      <h2 class="text-xl">Featured works</h2>
+    </div>
+    <div *ngFor="let work of listWorks" class="grid md:grid-cols-[246px,auto] gap-8 border-b py-8">
+      <div>
+        <img src={{work.image}} alt="" class="rounded-lg w-full " />
+      </div>
+      <div>
+        <h3><a href="" class="text-[#21243D] text-[20px] font-bold">{{work.name}}</a></h3>
+        <div class="flex space-x-4 items-center py-5">
+          <span class="inline-block bg-[#142850] py-1 px-2 font-bold text-white rounded-full">{{work.date}}</span>
+          <span class="text-[#8695A4]">{{work.framworks}}</span>
+        </div>
+        <p class="text-[#21243D]">{{work.description}}</p>
+      </div>
+    </div>
+  </div>
+</section>
