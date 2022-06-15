@@ -26,7 +26,6 @@ export class EditblogComponent implements OnInit {
 
   ngOnInit(): void {
     this.blogsService.getbyId(this.id).subscribe(work=>{this.getWork=work})
-
   }
 
 }

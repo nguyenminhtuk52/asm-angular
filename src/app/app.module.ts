@@ -25,6 +25,7 @@ import { ListblogComponent } from './pages/admin/blog/listblog/listblog.componen
 import { AddblogComponent } from './pages/admin/blog/addblog/addblog.component';
 import { EditblogComponent } from './pages/admin/blog/editblog/editblog.component';
 import { BlogsBlogsdeltailComponent } from './pages/blogs-blogsdeltail/blogs-blogsdeltail.component';
+import { WorksDetailComponent } from './pages/works-detail/works-detail.component';
 
 registerLocaleData(en);
 
@@ -46,6 +47,7 @@ registerLocaleData(en);
     AddblogComponent,
     EditblogComponent,
     BlogsBlogsdeltailComponent,
+    WorksDetailComponent,
   ],
   imports: [
     BrowserModule,

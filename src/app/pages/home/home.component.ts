@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Iworks } from 'src/app/models/work';
+import { BlogsService } from 'src/app/service/blogs.service';
 import { WorksService } from 'src/app/service/works.service';
 
 @Component({
@@ -10,14 +11,17 @@ import { WorksService } from 'src/app/service/works.service';
 export class HomeComponent implements OnInit {
 
   listWorks?: Iworks[];
+  listBlogs?: Iworks[];
   constructor(
-    private worksService: WorksService
+    private worksService: WorksService,
+    private blogsService: BlogsService
   ) { }
   ngOnInit(): void {
     this.worksService.getAll().subscribe((list) => {
       this.listWorks = list
-      console.log(list);
-
+    }),
+    this.blogsService.getAll().subscribe((listblog) => {
+      this.listBlogs = listblog
     })
   }
 

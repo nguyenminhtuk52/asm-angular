@@ -11,13 +11,17 @@ import { WorksComponent } from './pages/works/works.component';
 import { ListblogComponent } from './pages/admin/blog/listblog/listblog.component';
 import { AddblogComponent } from './pages/admin/blog/addblog/addblog.component';
 import { EditblogComponent } from './pages/admin/blog/editblog/editblog.component';
+import { BlogsBlogsdeltailComponent } from './pages/blogs-blogsdeltail/blogs-blogsdeltail.component';
+import { WorksDetailComponent } from './pages/works-detail/works-detail.component';
 
 const routes: Routes = [
   {
     path: '', component: LayoutComponent, children: [
       { path: '', component: HomeComponent },
-      { path: 'blog', component: BlogComponent },
-      { path: 'works', component: WorksComponent }
+      { path: 'blogs', component: BlogComponent },
+      { path: 'works', component: WorksComponent },
+      { path: 'blogs/:id/detail', component: BlogsBlogsdeltailComponent },
+      { path: 'works/:id/detail', component: WorksDetailComponent }
     ]
   },
 
@@ -25,15 +29,10 @@ const routes: Routes = [
     path: 'admin', component: DashboardComponent, children: [
       { path: 'works', component: ListComponent },
       { path: 'works/add', component: AddComponent },
-      { path: 'works:id/edit', component: EditComponent },
-
-      {
-        path: 'blogs', component: ListblogComponent
-      },
+      { path: 'works/:id/edit', component: EditComponent },
+      {path: 'blogs', component: ListblogComponent},
       { path: 'blogs/add', component: AddblogComponent },
-      { path: 'blogs/:id/edit', component: EditblogComponent }
-
-
+      { path: 'blogs/:id/edit', component: EditblogComponent}
     ]
   }
 ];

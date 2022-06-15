@@ -17,6 +17,7 @@
       <thead>
         <tr>
           <th scope="col">Name</th>
+          <th>Image</th>
           <th scope="col">Frameworks</th>
           <th scope="col">Description</th>
           <th scope="col">Action</th>
@@ -25,6 +26,7 @@
       <tbody>
           <tr *ngFor="let work of listWorks">
             <td>{{work.name}}</td>
+            <td><img src={{work.image}} alt=""></td>
             <td>{{work.framworks}}</td>
             <td>{{work.description}}</td>
             <td>
