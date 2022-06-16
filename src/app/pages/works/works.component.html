@@ -2,12 +2,12 @@
   <div class="max-w-8xl mx-auto px-5">
     <div *ngFor="let work of listWorks" class="border-b py-8 md:px-60" >
       <div class="md:max-w-3xl">
-        <h3><a href="" class="text-[#21243D] text-[20px] font-bold">{{work.name}}</a></h3>
+        <h3><a href="" routerLink="/works/{{work.id}}/detail" class="text-[#21243D] text-[20px] font-bold">{{work.name}}</a></h3>
         <div class="flex space-x-4 items-center py-5">
           <span class="inline-block bg-[#FF7C7C] py-1 px-2 font-bold text-white rounded-full">{{work.date}}</span>
           <span class="text-[#8695A4]">{{work.framworks}}</span>
         </div>
-        <p class="text-[#21243D]">{{work.description}}</p>
+        <p class="text-[#21243D] overflow-hidden text-ellipsis whitespace-nowrap">{{work.description}}</p>
       </div>
       <div>
         <img src={{work.image}} alt="" class="rounded-lg md:max-w-4xl w-full py-10"/>

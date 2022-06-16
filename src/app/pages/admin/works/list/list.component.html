@@ -19,7 +19,6 @@
           <th scope="col">Name</th>
           <th scope="col">Image</th>
           <th scope="col">Frameworks</th>
-          <th scope="col">Description</th>
           <th scope="col">Action</th>
         </tr>
       </thead>
@@ -28,7 +27,6 @@
             <td>{{work.name}}</td>
             <td><img src={{work.image}} alt=""></td>
             <td>{{work.framworks}}</td>
-            <td>{{work.description}}</td>
             <td>
               <button routerLink="/admin/works/{{work.id}}/edit" type="button" class="btn btn-outline-success">Sửa</button>
               <button type="button" class="btn btn-outline-danger" (click)="onRemove(work.id!)">Xóa</button>

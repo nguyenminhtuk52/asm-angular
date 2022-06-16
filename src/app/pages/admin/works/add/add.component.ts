@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 import { WorksService } from 'src/app/service/works.service';
 
 @Component({
@@ -18,10 +20,13 @@ export class AddComponent implements OnInit {
     console.log(this.work);
     this.worksService.create(this.work).subscribe(()=>{
       alert("Them thanh cong");
+      this.router.navigateByUrl("admin/works")
     })
   }
   constructor(
-    private worksService: WorksService
+    private worksService: WorksService,
+    private router:Router,
+    private fb :FormBuilder
   ) { }
 
   ngOnInit(): void {

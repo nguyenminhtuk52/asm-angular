@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Iworks } from 'src/app/models/work';
+import { WorksService } from 'src/app/service/works.service';
 
 @Component({
   selector: 'app-works-detail',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WorksDetailComponent implements OnInit {
 
-  constructor() { }
-
+  id: any = this.activateRoute.snapshot.paramMap.get('id')
+  getWork!: Iworks
+  constructor(
+    private activateRoute: ActivatedRoute,
+    private worksService:WorksService
+  ) {}
   ngOnInit(): void {
+    this.worksService.getbyId(this.id).subscribe(work => { this.getWork = work })
+
   }
 
 }

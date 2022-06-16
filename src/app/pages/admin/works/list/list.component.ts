@@ -20,9 +20,10 @@ export class ListComponent implements OnInit {
     })
   }
   onRemove(id: number) {
-    this.listWorks = this.listWorks?.filter(item => item.id !== id)
-    this.worksService.remove(id).subscribe(() => {
-
-    })
+    if (window.confirm("Bạn có muốn xóa không ?")) {
+      this.listWorks = this.listWorks?.filter(item => item.id !== id)
+      this.worksService.remove(id).subscribe(() => {
+      })
+    }
   }
 }

@@ -32,7 +32,7 @@
         <span>|</span>
         <span>{{blog.framworks}}</span>
       </div>
-      <p>{{blog.description}}</p>
+      <p class="overflow-hidden text-ellipsis whitespace-pre">{{blog.description}}</p>
     </div>
   </div>
 </section>
@@ -46,12 +46,12 @@
         <img src={{work.image}} alt="" class="rounded-lg w-full " />
       </div>
       <div>
-        <h3><a href="" class="text-[#21243D] text-[20px] font-bold">{{work.name}}</a></h3>
+        <h3><a href="" routerLink="works/{{work.id}}/detail" class="text-[#21243D] text-[20px] font-bold">{{work.name}}</a></h3>
         <div class="flex space-x-4 items-center py-5">
           <span class="inline-block bg-[#142850] py-1 px-2 font-bold text-white rounded-full">{{work.date}}</span>
           <span class="text-[#8695A4]">{{work.framworks}}</span>
         </div>
-        <p class="text-[#21243D]">{{work.description}}</p>
+        <p class="text-[#21243D] overflow-hidden text-ellipsis whitespace-nowrap">{{work.description}}</p>
       </div>
     </div>
   </div>

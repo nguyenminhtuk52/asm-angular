@@ -11,18 +11,19 @@ import { WorksService } from 'src/app/service/works.service';
 export class ListblogComponent implements OnInit {
   listWorks?: Iworks[];
   constructor(
-    private blogsService:BlogsService
+    private blogsService: BlogsService
   ) { }
   ngOnInit(): void {
     this.blogsService.getAll().subscribe((list) => {
       this.listWorks = list
       console.log(list);
-
     })
   }
   onRemove(id: number) {
-    this.listWorks = this.listWorks?.filter(item => item.id !== id)
-    this.blogsService.remove(id).subscribe(() => {
-    })
+    if (window.confirm("Bạn có muốn xóa không?")) {
+      this.listWorks = this.listWorks?.filter(item => item.id !== id)
+      this.blogsService.remove(id).subscribe(() => {
+      })
+    }
   }
 }
